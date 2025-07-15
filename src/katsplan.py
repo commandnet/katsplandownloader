@@ -6,6 +6,7 @@ import requests
 from requests.adapters import HTTPAdapter
 from urllib3.util.retry import Retry
 import json
+import os
 class api():
     
     token = ""
@@ -225,6 +226,9 @@ class api():
     def download_file(self,file):
         url = f"https://www.kats-plan.de/{self.org}/api/graphql/download?fileid={file['url']}&token={self.token}"
         local_path = f"content/{file['url']}.{file['type']}"
+        if os.path.exists(local_path):
+            logging.info(f"already exists: {local_path}")
+            return
 
         session = requests.Session()
         retry = Retry(
