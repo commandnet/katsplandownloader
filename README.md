@@ -10,7 +10,7 @@ Die installation ist denkbar einfach.
 - cd katsplandownloader
 - mv env-example .env
 - .env bearbeiten
-- docker-compose up -d
+- docker compose up -d
 - http://serverip:8001 aufrufen und benutzen
 
 ### Passwort
