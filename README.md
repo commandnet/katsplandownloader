@@ -16,4 +16,4 @@ Die installation ist denkbar einfach.
 kats-plan.de überträgt das Benutzerpasswort "verschlüsselt", das verschlüsselte Passwort lässt sich am einfachsten mit der Firefox Entwickler Konsole auslesen.
 Hierzu die Loginseite von kats-plan.de/ORGANISATION aufrufen und mit F12 die Entwickler Konsole öffnen. Dann Persistent Logs einschalten und einmal einloggen.
 Anschließend kann man im Request das verschlüsselte Passwort einsehen.
-
+![image](docs/firefox.png)
