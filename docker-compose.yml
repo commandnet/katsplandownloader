@@ -1,0 +1,22 @@
+services:
+  apache:
+    image: httpd:latest
+    container_name: web
+    restart: always
+    ports:
+    - '8001:80'
+    volumes:
+    - katshandbuch-volume:/usr/local/apache2/htdocs
+  
+  downloader:
+    container_name: downloader
+    environment:
+      KATSPLAN_USERNAME: ${KATSPLAN_USERNAME}
+      KATSPLAN_PASSWORD_ENCRYPTED: ${KATSPLAN_PASSWORD_ENCRYPTED}
+      KATSPLAN_ORG: ${KATSPLAN_ORG}
+    build: .
+    volumes:
+    - katshandbuch-volume:/opt/content
+
+volumes:
+  katshandbuch-volume:
