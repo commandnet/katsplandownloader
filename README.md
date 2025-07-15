@@ -2,6 +2,7 @@
 Dieses Tool läd alle inhalte (für die der angegebene User Berechtigungen hat herunter und bietet die Inhalte durch einen lokalen Webserver zum Anzeigen an)
 Das docker-compose File definiert 2 Container. Der "downloader" Container wird gestartet, läd die Inhalte von katsplan herunter und beendet sich anschließend.
 Der apache Container stellt auf port 8001 einen Webserver bereit, der die heruntergeladenen Inhalte anbietet.
+Dieses Tool soll als Rückfallebene für eine berechtigte Organisation dienen. Cloudbasierte Produkte sind in der Krise eine doofe idee...
 
 ### Installation
 Die installation ist denkbar einfach.
@@ -17,3 +18,4 @@ kats-plan.de überträgt das Benutzerpasswort "verschlüsselt", das verschlüsse
 Hierzu die Loginseite von kats-plan.de/ORGANISATION aufrufen und mit F12 die Entwickler Konsole öffnen. Dann Persistent Logs einschalten und einmal einloggen.
 Anschließend kann man im Request das verschlüsselte Passwort einsehen.
 ![image](docs/firefox.png)
+
